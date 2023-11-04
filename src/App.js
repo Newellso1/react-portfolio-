@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import { Children } from "react";
+import profilePicture from "./Profile-pixel.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }
 
 export default App;
+
+function Header() {
+  return (
+    <header>
+      <Logo />
+      <Navigation />
+    </header>
+  );
+}
+
+function Logo() {
+  return (
+    <div>
+      <h1>I AM SAM</h1>
+    </div>
+  );
+}
+
+function Navigation() {
+  return (
+    <ul>
+      <NavigationLink>About</NavigationLink>
+      <NavigationLink>Projects</NavigationLink>
+      <NavigationLink>Contact</NavigationLink>
+    </ul>
+  );
+}
+
+function NavigationLink({ children }) {
+  return <li>{children}</li>;
+}
+
+function About() {
+  return (
+    <div>
+      <img src={profilePicture} alt="profile" style={{ width: "200px" }} />
+    </div>
+  );
+}
+function Projects() {
+  return <h1>Projects</h1>;
+}
+function Contact() {
+  return <h1>Contact</h1>;
+}
