@@ -75,7 +75,12 @@ function Projects() {
           link="https://emoji-library-3953b.web.app/"
           emoji="🤓"
         />
-        <Project />
+        <Project
+          title="React-Racers"
+          description="The React-Racers app is a simple web page that displays a list of products that the user can add to their basket, the total price is updated when a product is added or removed and conditional rendering is used to allow the user to display the basket or not."
+          link="https://react-store-5fd57.web.app/"
+          emoji="🏎️"
+        />
         <Project />
       </div>
     </div>
